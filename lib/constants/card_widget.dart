@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:example_appp/main.dart';
 
 class CardWidget extends StatefulWidget {
 
@@ -30,21 +29,35 @@ class _CardWidgetState extends State<CardWidget> {
         borderRadius: BorderRadius.circular(20),
       ),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Icon(widget.icon, color: Colors.white),
-          Text(
-            widget.title,
-            style: const TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Icon(widget.icon, color: Colors.white),
+                Icon(Icons.more_vert, color: Colors.white),
+              ],
             ),
           ),
-          Text(
-            widget.cardNumber,
-            style: const TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  widget.title,
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                        Text(
+              widget.cardNumber,
+              style: const TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
+            ),],
             ),
           ),
         ],
